@@ -15,7 +15,7 @@ mu_s = 1.2*mu_k
 floor = box(pos=(0,0,0),height=0.5,length=50,width=25,color=color.green)
 initCratePos=vector(-20,2.25,0)
 crate = box(pos=initCratePos,height=4,length=6,width=4,color=color.red)
-crate.mass = 10.
+crate.mass = float(input("Mass of the crate (kg):"))
 crate.vel=vector(initVel,0,0).rotate(theta_rad,(0,0,1))
 
 scene.forward = (0,-.5,-.866)
