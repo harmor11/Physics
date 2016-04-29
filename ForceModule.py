@@ -4,7 +4,7 @@ from visual import *
 from math import *
 
 def F_weight(mass,planet="earth"):
-    gravity={"earth":9.8,"moon":1.62}
+    gravity={"earth":9.81,"moon":1.62}
     planet=planet.lower() 
     F_weight=mass*vector(0,-gravity[planet], 0)
     return F_weight
@@ -24,3 +24,7 @@ def F_gravity(obj1, obj2):
     G = 6.67*pow(10,-11)
     F_gravity = -G*obj1.mass*obj2.mass*r/d.mag2
     return F_gravity
+
+def torque(length, theta.applied, force.applied):
+    tor = length*sin(theta.applied)*force.applied
+    return tor

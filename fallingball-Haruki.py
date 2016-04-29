@@ -9,13 +9,13 @@ from visual.graph import *
 from math import *
 
 ##create ball and ground
-rad=0.5
+rad= float(input("What is the radius of the ball?"))
 thk=0.2
 ball = sphere(pos=(0,rad+thk/2,0), radius=rad, color=color.red)
 ground = box(pos=(0,0,0), size=(25, thk, 25), color=color.green)
 
 ##set velocity and acceleration
-velocity = 25
+velocity = float(input("What is the initial velocity of the ball?"))
 g = vector(0,-9.8,0)
 ball.vel = vector(0,velocity,0)
 

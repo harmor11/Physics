@@ -3,16 +3,18 @@ from math import *
 from visual.graph import *
 import ForceModule
 
-ball = sphere(pos=(0,1,0), radius=0.5, color=color.cyan)
+ball.pos = float(input("How high is the rocket?"))
+ball = sphere(pos=(0,ball.pos,0), radius=0.5, color=color.cyan)
 wall = box(pos=(0,0,0), size=(12,0.2,12), color=color.green)
-ball.vel = vector(0, 0, 0)
+ball.spd = float(input("What is the ball's inital speed?"))
+ball.vel = vector(0, ball.spd, 0)
 ball.Cd=0.205
 ball.area=.0106
 ball.accel= vector(0,0,0)
 ball.Uex=vector(0,0,0)
 ball.R = 0
 watermass=0.5
-ball.mass=.1889+watermass
+ball.mass= float(input("How many Kg is the ball?"))+watermass
 ball.neck=.011
 airvolume=.0015
 airpressure=310264.08
